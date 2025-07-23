@@ -1,0 +1,25 @@
+library(fpp3)
+
+melsyd_economy <- ansett |>
+  filter(Airports == "MEL-SYD", Class == "Economy") |>
+  mutate(Passengers = Passengers/1000)
+autoplot(melsyd_economy, Passengers) +
+  labs(title = "Ansett airlines economy class",
+       subtitle = "Melbourne-Sydney",
+       y = "Passengers ('000)")
+
+mean(mtcars$mpg)
+sessionInfo()
+
+install.packages("KernSmooth")
+library(KernSmooth)
+
+
+x <- 4L
+class(x)
+
+x <- c(4, "a", T)
+class(x)
+
+x <- 1:4
+class(x)
